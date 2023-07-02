@@ -2,7 +2,6 @@ import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import style from './ImageGallery.module.css';
 import PropTypes from 'prop-types';
 
-// Побудова галереї з елементів отриманих від зовнішнього ImageGalleryItem
 const ImageGallery = ({ images, handlePreview }) => {
   const renderGallery = () =>
     images.map(({ id, webformatURL, tags }) => (
@@ -17,7 +16,7 @@ const ImageGallery = ({ images, handlePreview }) => {
 
   return (
     <div>
-      <ul className={style.ImageGallery}>{images ? renderGallery() : null}</ul>
+      <ul className={style.ImageGallery}>{images && renderGallery()}</ul>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import style from './ImageGalleryItem.module.css';
 
-// Побудова і li img і експорт картки в галерею
+
 const ImageGalleryItem = ({ smImage, tags, onClick }) => {
   return (
     <li className={style.ImageGalleryItem}>

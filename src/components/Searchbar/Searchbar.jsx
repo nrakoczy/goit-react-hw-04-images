@@ -14,10 +14,11 @@ const Searchbar = ({ onSearch }) => {
     event.preventDefault();
     const clearSearchRequest = () => setSearchRequest('');
     if (searchRequest.trim() === '') {
-      return toast.warning('Search field is empty!');
+      toast.warning('Search field is empty!');
+    } else {
+      onSearch(searchRequest);
+      clearSearchRequest();
     }
-    onSearch(searchRequest);
-    clearSearchRequest();
   };
 
   return (
